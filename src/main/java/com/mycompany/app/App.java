@@ -30,13 +30,24 @@ public class App
         System.out.println("inside search");
         if (array1 == null && array2==null) return false;
 
-        for (int elt : array1) {		//iki array e ayrı ayrı bakar, ortak eleman varsa true yoksa false döner!
+   /*     for (int elt : array1) {		
 		for(int alt : array2){
-			if(elt==alt){
-			 return true;
+			//if(array1.get(elt)==array2.get(alt)){
+			if(elt==alt) {
+			return true;
 			}
         }//end for
-    }//end for
+    }//end for*/
+
+	for(int i=0; i<array1.size(); i++){  			//iki array e ayrı ayrı bakar, ortak eleman varsa true yoksa false döner!
+		if(array2.contains(array1.get(i))){
+			return true;
+		}//end if
+	}//end for
+	
+	if(array1.size()==e && array2.size()==d){ 	//array1 uzunlugu e ye ,  array2 uzunlugu d ye esitse true döner!
+				 return true;
+		}
         return false;
       }
 

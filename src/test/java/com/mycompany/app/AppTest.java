@@ -59,10 +59,17 @@ public class AppTest
     public void testInput() { //App sınıfındaki search2 metodunu kontrol eder! 
 
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1,2,3,4));
+
 	ArrayList<Integer> array1 = new ArrayList<>(Arrays.asList(4,5,6,7));
+
 	assertTrue(new App().search2(array,array1, 1, 2));	//iki array de ortak elemen varsa true döner!
+
 	ArrayList<Integer> array3 = new ArrayList<>();
+
 	ArrayList<Integer> array4 = new ArrayList<>();	
-	assertFalse(new App().search2(array3,array4,1,2)); //arraylerin ikisi de boşsa false döner!
+
+	assertFalse(new App().search2(array3,array4,1,2));	 //arraylerin ikisi de boşsa false döner!
+
+	assertTrue(new App().search2(array,array1, 3 ,3));	 //array sizeları eşitse true döner!
 	}
 }
