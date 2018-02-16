@@ -26,6 +26,20 @@ public class App
         }
         return false;
       }
+	public static boolean search2(ArrayList<Integer> array1,ArrayList<Integer> array2, int e, int d) { //iki adet array alıp kontrol işlemleri yapar!
+        System.out.println("inside search");
+        if (array1 == null && array2==null) return false;
+
+        for (int elt : array1) {		//iki array e ayrı ayrı bakar, ortak eleman varsa true yoksa false döner!
+		for(int alt : array2){
+			if(elt==alt){
+			 return true;
+			}
+        }//end for
+    }//end for
+        return false;
+      }
+
     public static void main( String[] args )
     {
          port(getHerokuAssignedPort());
