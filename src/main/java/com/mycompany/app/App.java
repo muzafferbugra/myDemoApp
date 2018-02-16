@@ -74,13 +74,28 @@ public class App
             int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
             inputList.add(value);
           }
+	
+	
+	String input3 = req.queryParams("input3");
+          java.util.Scanner sc2 = new java.util.Scanner(input3);
+          sc2.useDelimiter("[;\r\n]+");
+          java.util.ArrayList<Integer> inputList1 = new java.util.ArrayList<>();
+          while (sc2.hasNext())
+          {
+            int value1 = Integer.parseInt(sc2.next().replaceAll("\\s",""));
+            inputList1.add(value1);
+          }
+
           System.out.println(inputList);
 
 
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
+	
+	String input4 = req.queryParams("input4").replaceAll("\\s","");
+          int input4AsInt = Integer.parseInt(input4);
 
-          boolean result = App.search(inputList, input2AsInt);
+          boolean result = App.search2(inputList, inputList1 ,input2AsInt ,input4AsInt );
 
          Map map = new HashMap();
           map.put("result", result);
