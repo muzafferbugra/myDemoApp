@@ -61,15 +61,21 @@ public class AppTest
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1,2,3,4));
 
 	ArrayList<Integer> array1 = new ArrayList<>(Arrays.asList(4,5,6,7));
+	
+	ArrayList<Integer> array5 = new ArrayList<>(Arrays.asList(17,18,19));
 
 	assertTrue(new App().search2(array,array1, 1, 2));	//iki array de ortak elemen varsa true döner!
+		
+        assertFalse(new App().search2(array,array5 ,1 ,2));	//ortak eleman yoksa false döner!		
 
 	ArrayList<Integer> array3 = new ArrayList<>();
 
 	ArrayList<Integer> array4 = new ArrayList<>();	
-
-	assertFalse(new App().search2(array3,array4,1,2));	 //arraylerin ikisi de boşsa false döner!
+	
+	assertFalse(new App().search2(array3,array4 , 1 ,2));	 //arraylerin ikisi de boşsa false döner!
 
 	assertTrue(new App().search2(array,array1, 3 ,3));	 //array sizeları eşitse true döner!
+	
+	assertFalse(new App().search2(array, array3, 7, 2));  	//array1 uzunluk e ye eşit değilse false döner!
 	}
 }

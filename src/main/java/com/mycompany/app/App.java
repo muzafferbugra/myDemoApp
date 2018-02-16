@@ -43,11 +43,15 @@ public class App
 		if(array2.contains(array1.get(i))){
 			return true;
 		}//end if
+		
 	}//end for
 	
 	if(array1.size()==e && array2.size()==d){ 	//array1 uzunlugu e ye ,  array2 uzunlugu d ye esitse true döner!
 				 return true;
 		}
+	if(array1.size()!=e){	//array1 uzunlugu e ye eşit değilse false döner!
+		return false;
+	}
         return false;
       }
 
