@@ -56,5 +56,11 @@ public class AppTest
     public void testNull() {
       assertFalse(new App().search(null, 1));
     }
+    public void testInput() { //a nın b den buyuk olup olmadıgını kontrol eder.. 
 
+      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1,2,3,4));
+
+	assertFalse(new App().search(array, 7 ));
+
+	}
 }
